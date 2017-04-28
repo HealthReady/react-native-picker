@@ -403,7 +403,7 @@ export default class PickerAny extends Component {
 	render(){
 
 		let mask = this.state.showMask ? (
-			<View style={styles.mask} >
+			<View style={[styles.mask, this.state.maskStyle]} >
 				<Text style={{width: width, height: height}} onPress={this._pickerCancel.bind(this)}></Text>
 			</View>
 		) : null;
@@ -426,7 +426,7 @@ export default class PickerAny extends Component {
 							{this.state.pickerTitle}
 						</Text>
 						<View style={styles.pickerFinishBtn}>
-							<Text style={[styles.pickerFinishBtnText, this.state.pickerBtnStyle]}
+							<Text style={[styles.pickerFinishBtnText, this.state.pickerFinishBtnStyle]}
 								onPress={this._pickerFinish.bind(this)}>{this.state.pickerBtnText}</Text>
 						</View>
 					</View>
